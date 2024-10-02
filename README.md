@@ -30,7 +30,7 @@ Google Image Downloader is a Python-based project that allows users to easily se
    source venv/bin/activate
 5. **Run Docker using the following command**
    
-   Don't forget to choose appropriate `DATABASE_URL` and `host`
+   Don't forget to choose appropriate `DATABASE_URL` and `host` in app/db.py
    ```bash
    docker compose up --build
 

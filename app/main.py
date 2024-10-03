@@ -8,15 +8,13 @@ app = FastAPI()
 
 app.include_router(router)
 
-
 @app.on_event("startup")
-async def main():
+async def startup_event():
     await init_db()
 
-
 if __name__ == "__main__":
-    asyncio.run(main())
-
+    import uvicorn
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
 
 
 
